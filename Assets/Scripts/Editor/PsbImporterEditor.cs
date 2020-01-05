@@ -19,15 +19,21 @@ public class PsbImporterEditor : ScriptedImporterEditor
 
         if(GUILayout.Button("qwe"))
         {
-            string prefabPath = "Assets/qwe.prefab";
-            EditorUtility.CreateEmptyPrefab(prefabPath);
+            //string prefabPath = "Assets/qwe.prefab";
+            //EditorUtility.CreateEmptyPrefab(prefabPath);
 
-            AnimationClip clip = new AnimationClip();
-            clip.name = "anim";
-            AssetDatabase.AddObjectToAsset(clip, prefabPath);
+            GameObject s1 = new GameObject("s1");
+            AssetDatabase.AddObjectToAsset(s1, "");
 
-            EditorUtility.CreateEmptyPrefab("Assets/qwe2.prefab");
-            AssetDatabase.AddObjectToAsset(clip, prefabPath);
+            AssetDatabase.CreateAsset(s1, "Assets/s1");
+
+            //AnimationClip clip = new AnimationClip();
+            //clip.name = "anim";
+            //AssetDatabase.AddObjectToAsset(clip, prefabPath);
+
+            //GameObject g2 = new GameObject("g2");
+            //GameObject asset = PrefabUtility.SaveAsPrefabAsset(g2, "Assets/qwe2.prefab");
+            //AssetDatabase.AddObjectToAsset(asset, prefabPath);
         }
     }
 }
